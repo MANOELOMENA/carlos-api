@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=s, initial-scale=1.0">
+  <link rel="icon" href="../my api/image/icon.png" >
+  <link rel="stylesheet" href="../my api/css/style.css">
+  <title>Marvel Herois</title>
+</head>
+<body>
+  
+  <img src="../my api/image/logo-removebg-preview.png" height="150px">
+  
+    <div class="header-buttons">
+        <button onclick="abrirModal('login')">Entrar</button>
+        <button onclick="abrirModal('cadastro')">Cadastrar</button>
+      </div>
+
+      <div id="modal-login" class="modal">
+        <h2>Formulário de Login</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <button onclick="fecharModal('login')">Fechar</button>
+      </div>
+    
+     
+      <div id="modal-cadastro" class="modal">
+        <h2>Formulário de Cadastro</h2>
+        <div class="container" id="container">
+          <form id="userForm" onsubmit="
+            return validaFormulario()">
+            <div class="input-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite o Nome" required>
+            </div>
+            <div class="input-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
+            </div>
+            <div class="input-group">
+              <label for="senha">Senha:</label>
+              <input type="password" id="senha" placeholder="Digite a senha">
+              <i id="olhoicon" class="fa fa-eye" onclick="olhoPassword()"></i>
+            </div>
+            <div class="input-group">
+              <label for="confirmSenha">Confirmação de Senha:</label>
+              <input type="password" id="confirmSenha" name="confirmSenha" minlength="8" placeholder="Confirma Senha"
+                required>
+              <i id="olhoicon2" class="fa fa-eye" onclick="olhoPassword2()"></i>
+            </div>
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+        
+        <button onclick="fecharModal('cadastro')">Fechar</button>
+      </div>
+
+
+      <div class="con">
+        <div class="input-c">
+          <input type="text" class="input" id="input-box">
+          <button class="button-n" id="pesquisar-button">Pesquisar</button>
+          <div class="list"></div>
+          <div class="display-con" id="show-con"></div>
+        </div>
+      </div>
+      
+      <script src="./js/script.js"></script>
+</body>
+</html>
+
